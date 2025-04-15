@@ -13,15 +13,15 @@ The following techniques have been used:
  - Multiple sampling techniques are evaluated. The data set is split into train and test.
  - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
 
-'''
+
 ## How to Run This Project
 
 # Step 1: Create the conda environment
-conda env create -f env.yml
+`conda env create -f env.yml`
 
 # Step 2: Activate the environment
-conda activate mle-dev
+`conda activate mle-dev`
 
 # Step 3: Run the script
-python nonstandardcode.py
-'''
+`python nonstandardcode.py`
+
