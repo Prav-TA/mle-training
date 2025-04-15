@@ -1,6 +1,5 @@
-# Median housing value prediction
-
-The housing data can be downloaded from https://raw.githubusercontent.com/ageron/handson-ml/master/. The script has codes to download the data. We have modelled the median house value on given housing data. 
+## Project Description - Median Housing Value Prediction
+This project focuses on predicting median housing prices in California using various supervised learning models. 
 
 The following techniques have been used: 
 
@@ -11,8 +10,18 @@ The following techniques have been used:
 ## Steps performed
  - We prepare and clean the data. We check and impute for missing values.
  - Features are generated and the variables are checked for correlation.
- - Multiple sampling techinuqies are evaluated. The data set is split into train and test.
+ - Multiple sampling techniques are evaluated. The data set is split into train and test.
  - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
 
-## To excute the script
-python < scriptname.py >
+'''
+## How to Run This Project
+
+# Step 1: Create the conda environment
+conda env create -f env.yml
+
+# Step 2: Activate the environment
+conda activate mle-dev
+
+# Step 3: Run the script
+python nonstandardcode.py
+'''
