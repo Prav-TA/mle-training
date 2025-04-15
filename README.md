@@ -17,7 +17,6 @@ The following techniques have been used:
 ## How to Run This Project
 
 ### Step 1: Create the conda environment
-```bash
 `conda env create -f env.yml`
 
 ### Step 2: Activate the environment
@@ -26,4 +25,3 @@ The following techniques have been used:
 ### Step 3: Run the script
 `python nonstandardcode.py`
 
-```
