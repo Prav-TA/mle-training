@@ -16,12 +16,14 @@ The following techniques have been used:
 
 ## How to Run This Project
 
-# Step 1: Create the conda environment
+### Step 1: Create the conda environment
+```bash
 `conda env create -f env.yml`
 
-# Step 2: Activate the environment
+### Step 2: Activate the environment
 `conda activate mle-dev`
 
-# Step 3: Run the script
+### Step 3: Run the script
 `python nonstandardcode.py`
 
+```
