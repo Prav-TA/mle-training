@@ -2,7 +2,8 @@
 
 ### Step 1: Create the conda environment in the folder
 
-- Firstly, go inside the below directory
+- Firstly, go inside the below directory:
+
 `$ cd idiomatic_code_exercise`
 
 `$ conda env create -f env.yml`
