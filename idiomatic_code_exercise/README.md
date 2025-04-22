@@ -1,6 +1,10 @@
 ## How to Run This Project
 
-### Step 1: Create the conda environment
+### Step 1: Create the conda environment in the folder
+
+- Firstly, go inside the below directory
+`$ cd idiomatic_code_exercise`
+
 `$ conda env create -f env.yml`
 
 The above command should create a conda python environment named `conda-format-exercise`
