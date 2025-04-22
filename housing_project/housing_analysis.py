@@ -89,15 +89,17 @@ def load_housing_data(housing_path=HOUSING_PATH):
     return pd.read_csv(csv_path)
 
 
+# Fetch and load the housing data
 fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH)
 housing = load_housing_data(housing_path=HOUSING_PATH)
 
-
+# Longitude and latitude Scatter plot
 housing.plot(kind="scatter", x="longitude", y="latitude")
 plt.show()
 
-
-corr_matrix = housing.drop("ocean_proximity", axis=1).corr()
+# Drop the ocean_proximity column
+housing_num = housing.drop("ocean_proximity", axis=1)
+corr_matrix = housing_num.corr()
 corr_matrix["median_house_value"].sort_values(ascending=False)
 
 
@@ -112,6 +114,3 @@ housing["population_per_household"] = (
     housing["population"] / housing["households"]
 )
 # fmt: on
-
-# Drop the ocean_proximity column
-housing_num = housing.drop("ocean_proximity", axis=1)
