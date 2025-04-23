@@ -19,3 +19,19 @@ Finally to run the script, use the following command:
 `python sphinx_lib/nonstandardcode.py`
 
 The script will download dataset from the internet and save it to the current directory. Please ensure your device is connected to the internet
+
+## Sphinx Documentation
+
+The procedure to run this project has been added as a rst documentation
+
+- Index for the documentation (`index.rst`) can be found at:
+
+`cd sphinx_documentation_exercise/docs`
+
+- All the built documentations can be found at:
+
+`cd sphinx_documentation_exercise/docs/documentations`
+
+
+
+
