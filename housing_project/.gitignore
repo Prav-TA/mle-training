@@ -1,0 +1,12 @@
+*.pyc
+*.csv
+*.tgz
+*.ipynb
+!*.py
+!*.pyproject.toml
+!*.yml
+!.gitignore
+!deploy/**/*
+!docs/**
+docs/_**/**
+**/__pycache__/**
