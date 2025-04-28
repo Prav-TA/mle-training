@@ -8,17 +8,21 @@ import pandas as pd
 from six.moves import urllib
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import StratifiedShuffleSplit, train_test_split
-
 from src.housing_price_prediction.constants import HOUSING_URL, LOGS_DIR
 from src.housing_price_prediction.utils import get_project_root, setup_logging
 
 
 def fetch_data(output_path: str):
     """
-    Download and extract the housing dataset in the specified output path.
+    Download the housing dataset from the given URL and extract it to the specified output path.
 
-    Args:
-        output_path (str): The directory where the dataset will be downloaded and extracted.
+    Parameters
+    ----------
+    output_path : str
+        The path where the downloaded and extracted data will be saved.
+    Returns
+    -------
+    None
     """
 
     os.makedirs(output_path, exist_ok=True)
@@ -38,11 +42,16 @@ def load_data(data_path: str):
     """
     Load housing data from the given path.
 
-    Args:
-        data_path (str): The path to the directory containing the housing dataset.
-    Returns:
-        DataFrame: The housing dataset.
+    Parameters
+    ----------
+    data_path : str
+        The path to the housing dataset (CSV file).
+    Returns
+    -------
+    DataFrame
+        The loaded housing dataset as a pandas DataFrame.
     """
+
     logging.info(f"Loading data from {data_path}")
     return pd.read_csv(data_path)
 
@@ -61,9 +70,7 @@ def preprocess_df(df):
     df = df.drop("ocean_proximity", axis=1)
     imputer = SimpleImputer(strategy="median")
     df_imputed = pd.DataFrame(imputer.fit_transform(df), columns=df.columns)
-    preprocessed_df = df_imputed.join(
-        pd.get_dummies(proximity_feature, drop_first=True)
-    )
+    preprocessed_df = df_imputed.join(pd.get_dummies(proximity_feature, drop_first=True))
     return preprocessed_df
 
 
